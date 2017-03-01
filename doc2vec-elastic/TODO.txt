@@ -1,0 +1,6 @@
+https://radimrehurek.com/gensim/models/word2vec.html
+https://www.tensorflow.org/tutorials/word2vec
+
+TODO: remove literal strings
+TODO: remove nnumbers
+TODO: export only class names
