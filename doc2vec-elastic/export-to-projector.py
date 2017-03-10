@@ -13,14 +13,13 @@ with open('model.txt') as sourcef, open('values.txt', 'w') as valuesf, open('lab
         line = line[:-1]
         firstspace = line.index(' ')
         label = line[:firstspace]
-        if label in classes or label.startswith('%'):
-            values = line[firstspace + 1:].replace(' ', '\t')
-            valuesf.write(values + '\n')
-            labelsf.write(label + '\t')
-            camel_components = camel_case_split(label)
-            if len(camel_components) > 1:
-                labelsf.write(camel_components[-1])
-            else:
-                labelsf.write('Other')
-            labelsf.write('\n')
+        values = line[firstspace + 1:].replace(' ', '\t')
+        valuesf.write(values + '\n')
+        labelsf.write(label + '\t')
+        camel_components = camel_case_split(label)
+        if len(camel_components) > 1:
+            labelsf.write(camel_components[-1])
+        else:
+            labelsf.write('Other')
+        labelsf.write('\n')
 
